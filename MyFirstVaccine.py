@@ -3,9 +3,10 @@ import hashlib
 import os
 import sys
 
-VirusDB = ['44d88612fea8a8f36de82e1278abb02f:EICAR Test' ,
-           '77bff0b143e4840ae73d4582a8914a43:Dummy Test'
-           ]
+VirusDB = [
+    '68:44d88612fea8a8f36de82e1278abb02f:EICAR TEST',
+    '65:77bff0b143e4840ae73d4582a8914a43:Dummy Test'
+]
 vdb = [] # 가공된 악성코드 DB가 저장된다.
 vsize = [] # 악성코드의 파일 크기만 저장한다.
  
@@ -14,8 +15,8 @@ def MakeVirusDB() :
     for pattern in VirusDB :
         t = []
         v = pattern.split(':') # 세미콜론을 기준으로 자른다.
-        t.append(v[0]) # MD5 해시를 저장한다.
-        t.append(v[1]) # 악성코드 이름을 저장한다.
+        t.append(v[1]) # MD5 해시를 저장한다.
+        t.append(v[2]) # 악성코드 이름을 저장한다.
         vdb.append(t) # 최종 vdb에 저장한다.
         
         size = int(v[0]) # 악성코드 파일 크기
