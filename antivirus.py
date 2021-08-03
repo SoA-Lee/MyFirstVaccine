@@ -3,12 +3,21 @@ import hashlib
 import os
 import sys
 
-VirusDB = [
-    '68:44d88612fea8a8f36de82e1278abb02f:EICAR TEST',
-    '65:77bff0b143e4840ae73d4582a8914a43:Dummy Test'
-]
+VirusDB = [] # 악성코드 패턴은 모두 virus.db에 존재함
 vdb = [] # 가공된 악성코드 DB가 저장된다.
 vsize = [] # 악성코드의 파일 크기만 저장한다.
+
+# virus.db 파일에서 악성코드 패턴을 읽는다.
+def LoadVirusDB() :
+    fp = open('virus.db','rb') # 악성코드 패턴을 연다.
+
+    while True :
+        line = fp.readline() # 악성코드 패턴을 한 줄 읽는다.
+        if not line : break
+        line = line.strip()
+        VirusDB.append(line) # 악성코드 패턴을 VirusDB에 추가한다.
+
+    fp.close() # 악성코드 패턴 파일을 닫는다.
  
 # VirusDB를 가공하여 VDB에 저장한다.
 def MakeVirusDB() :
