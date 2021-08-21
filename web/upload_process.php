@@ -2,12 +2,20 @@
 
 var_dump($_FILES);
 
-echo $_FILES['upfile']['tmp_name'];
-echo " hello";
+//추가한 부분
+//$tmp = "cd /var/www/html/MyFirstVaccine&& python antivirus.py";
+//exec($tmp);
 
-$db_conn = mysqli_connect("10.16.0.5", "root", "rootpass", "cloudbread");
+$tmp = "cd /var/www/html/MyFirstVaccine&& python antivirus.py ".$_FILES['upfile']['tmp_name'];
+exec($tmp);
 
-echo $dbconn;
+//$command = escapeshellcmd("cd /var/www/html/MyFirstVaccine&& python antivirus.py")
+
+//var_dump($_FILES);
+
+$db_conn = mysqli_connect("10.1.3.5", "root", "rootpass", "cloudbread");
+
+//echo $dbconn;
 
 if(isset($_FILES['upfile']) && $_FILES['upfile']['name'] != "") {
 
@@ -29,11 +37,11 @@ if(isset($_FILES['upfile']) && $_FILES['upfile']['name'] != "") {
 
     // 확장자 체크
 
-    if(!in_array($ext, $allowed_extensions)) {
+   // if(!in_array($ext, $allowed_extensions)) {
 
-        echo "업로드할 수 없는 확장자 입니다.";
+    //    echo "업로드할 수 없는 확장자 입니다.";
 
-    }
+  //  }
 
 
 
