@@ -32,35 +32,23 @@ function formSubmit(f) {
 
         var ext = path.slice(path.indexOf(".") + 1).toLowerCase();
 
-        var checkExt = false;
+        var checkExt = false
 
-        for(var i = 0; i < extArray.length; i++) {
+        //for(var i = 0; i < extArray.length; i++) {
 
-                if(ext == extArray[i]) {
+             //   if(ext == extArray[i]) {
 
-                        checkExt = true;
+                //        checkExt = true;
 
-                        break;
+               //         break;
 
-                }
+//}
 
-        }
+      //  }
 
+      //  return true;
 
-
-        if(checkExt == false) {
-
-                alert("업로드 할 수 없는 파일 확장자 입니다.");
-
-            return false;
-
-        }
-
-
-
-        return true;
-
-}
+//}
 
 </script>
 
