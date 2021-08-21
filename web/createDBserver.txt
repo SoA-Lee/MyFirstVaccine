@@ -4,3 +4,5 @@ CREATE TABLE upload_file (
   name_save VARCHAR(255),
   reg_time  TIMESTAMP NOT NULL
 );
+
+//WEB,DB SERVER PERMISSION EXTEND
