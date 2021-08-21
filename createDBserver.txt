@@ -1,0 +1,6 @@
+CREATE TABLE upload_file (
+  file_id   VARCHAR(255) NOT NULL PRIMARY KEY,
+  name_orig VARCHAR(255),
+  name_save VARCHAR(255),
+  reg_time  TIMESTAMP NOT NULL
+);
