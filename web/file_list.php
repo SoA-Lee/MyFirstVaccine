@@ -1,5 +1,10 @@
-<table border="1">
+<div style="text-align: center; color: #6495ED; position: absolute; top:150px; left: 36%" >
+<img src="./image/koren_image.jfif" alt="My Image" style="width: 50%; height: auto;">
+<h1>FILE List</h1>
+<hr style="border: solid 2px grey;">
+</div>
 
+<table style="margin-left: auto; margin-right: auto; margin-top: 330px" width= "60%" height= "100px" border= "1"  cellpadding="10px" style= "text-align : center; border-collapse: collapse; ">
 <tr>
 
         <th>파일 아이디</th>
