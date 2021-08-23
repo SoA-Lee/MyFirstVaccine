@@ -1,3 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+<style>
+
+        #btn1{
+                border-bottom-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                margin-right:-4px;
+                padding:5px;
+        }
+        #btn2{
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                margin-left:-3px;
+                color: #6495ED;
+                border: 3px solid #6495ED;
+                padding: 5px;
+        }
+        #hr{
+                height: 1px;
+                background: #bbb;
+                background-image: -webkit-linear-gradient(left, #eee, #777, #eee);
+                background-image: -moz-linear-gradient(left, #eee, #777, #eee);
+                background-image: -ms-linear-gradient(left, #eee, #777, #eee);
+                background-image: -o-linear-gradient(left, #eee, #777, #eee);
+        }
+</style>
+        </head>
+         <body>
+        <div style="text-align: center; position: absolute; top:300px; left: 35%" >
+            <div align="center">
+        <img src="./image/koren_image.jfif" alt="My Image" style="width: 50%; height: auto;"> </p>
+        <label for="upfile" style="font-size: 30px; color: #6495ED; font-style: italic||bold;" >업로드 결과
+        </label>
+        </p>
+        </p>
+        <hr style="border: solid 2px grey;">
+        </p>
+    
 <?php
 
 var_dump($_FILES);
@@ -102,3 +146,9 @@ if(isset($_FILES['upfile']) && $_FILES['upfile']['name'] != "") {
 mysqli_close($db_conn);
 
 ?>
+        </div>
+</div>
+
+        </body>
+
+</html>
